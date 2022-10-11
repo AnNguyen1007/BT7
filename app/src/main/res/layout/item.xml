@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:fontFamily="@font/akaya_telivigala"
+        android:hint="Name"
+        android:paddingLeft="20dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/song_infor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_name"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:fontFamily="@font/akaya_telivigala"
+        android:hint="Informtion of item"
+        android:paddingLeft="20dp"
+        android:textAlignment="textEnd"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/song_tacgia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/song_infor"
+        android:layout_marginRight="20dp"
+        android:layout_toRightOf="@+id/imgAvatar"
+        android:textAlignment="textEnd"
+        android:fontFamily="@font/akaya_telivigala"
+        android:hint="theloai"
+        android:textSize="14dp" />
+
+</RelativeLayout>
