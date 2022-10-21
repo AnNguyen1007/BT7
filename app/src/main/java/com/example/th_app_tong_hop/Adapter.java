@@ -8,47 +8,68 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
-public class Adapter extends BaseAdapter {
-    private Context context;
-    private int layout;
-    private List<Music> arraylist;
+public class Adapter extends RecyclerView.Adapter<Adapter.SongViewHoder> {
 
-    public Adapter(Context context, int layout, List<Music> arraylist) {
-        this.context = context;
-        this.layout = layout;
-        this.arraylist = arraylist;
+    private  Context mContext;
+    private  List<Music> mListSong;
+
+    public Adapter(Context mContext) {
+        this.mContext = mContext;
     }
-    public int getCount() {
-        return arraylist.size();
-    }
-
-
-    public Object getItem(int i) {
-        return null;
+    public void  setData(List<Music> list){
+        this.mListSong = list;
+        notifyDataSetChanged();
     }
 
+    @NonNull
+    @Override
+    public SongViewHoder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()) .inflate(R.layout.item,parent,false);
+        return new SongViewHoder(view);
+    }
 
-    public long getItemId(int i) {
+    @Override
+    public void onBindViewHolder(@NonNull SongViewHoder holder, int position) {
+        Music music = mListSong.get(position);
+        if ( music == null){
+            return;
+        }
+        holder.imgSong.setImageResource(music.getImg());
+        holder.songName.setText(music.getTenbai());
+        holder.i4Song.setText(music.getInfor());
+        holder.ctgory.setText(music.getTacgia());
+
+    }
+
+    @Override
+    public int getItemCount() {
+        if (mListSong != null){
+            return  mListSong.size();
+        }
         return 0;
     }
 
+    public class SongViewHoder extends RecyclerView.ViewHolder {
 
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        view  = inflater.inflate(layout,null);
-        Music music = arraylist.get(i);
+        private  ImageView imgSong;
+        private  TextView songName;
+        private  TextView i4Song;
+        private  TextView ctgory;
 
-        TextView textView1 = view.findViewById(R.id.song_name);
-        TextView textView2 = view.findViewById(R.id.song_tacgia);
-        TextView textView3 = view.findViewById(R.id.song_infor);
-        ImageView imageView = view.findViewById(R.id.imgAvatar);
 
-        textView1.setText(music.getTenbai());
-        textView2.setText(music.getInfor());
-        textView3.setText(music.getTacgia());
-        imageView.setImageResource(music.getImg());
-        return view;
+
+        public SongViewHoder(@NonNull View itemView) {
+            super(itemView);
+            imgSong =itemView.findViewById(R.id.imgAvatar);
+            songName =itemView.findViewById(R.id.song_name);
+            i4Song =itemView.findViewById(R.id.song_infor);
+            ctgory =itemView.findViewById(R.id.song_tacgia);
+        }
     }
+
 }

@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Profile"
-    android:backgroundTint="#FFFFFF"
     android:orientation="vertical"
-    android:background="@drawable/ic_wave2"
+    android:background="@drawable/bg_color"
     android:id="@+id/lnTaiKhoan">
 
 
@@ -15,16 +14,17 @@
         android:elevation="-2dp"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/press_start_2p"
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         android:text="USER INFORMATION"
         android:textColor="#2A056C"
-        android:textSize="34sp" />
+        android:textSize="23dp" />
 
     <LinearLayout
         android:id="@+id/lnContent"
         android:layout_width="match_parent"
+        android:background="@drawable/bg_color"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_weight="8"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/ava"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
@@ -45,11 +45,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_toStartOf="@+id/editAnh"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
-                android:text="Đổi ảnh đại diện"
+                android:text="Change avatar"
                 android:textSize="18dp" />
 
             <ImageButton
@@ -58,7 +57,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:backgroundTint="#8FD8C7"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck" />
         </RelativeLayout>
@@ -79,7 +78,7 @@
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
 
                 android:text="Account"
@@ -92,7 +91,7 @@
                 android:layout_height="match_parent"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="50dp"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
 
                 android:text="Kanisnoluv"
@@ -107,6 +106,7 @@
             android:layout_marginHorizontal="8dp"/>
 
         <RelativeLayout
+
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal"
@@ -116,7 +116,7 @@
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
                 android:text="Full name"
                 android:textColor="@color/black"
@@ -126,10 +126,10 @@
                 android:id="@+id/vFullname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
+                android:layout_marginEnd="0dp"
                 android:layout_toStartOf="@+id/editTen"
-                android:fontFamily="@font/tinos"
-                android:text="Nguyễn Tiến An"
+                android:fontFamily="@font/akaya_telivigala"
+                android:text="Nguyen Tien An"
                 android:textSize="18dp" />
 
             <ImageButton
@@ -138,7 +138,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:backgroundTint="#8FD8C7"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck" />
         </RelativeLayout>
@@ -159,7 +159,7 @@
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
                 android:text="Date "
                 android:textColor="@color/black"
@@ -170,7 +170,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/editNgaySinh"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
                 android:text="10/07/2002"
                 android:textSize="18dp" />
@@ -181,7 +181,7 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:backgroundTint="#8FD8C7"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck" />
         </RelativeLayout>
@@ -231,6 +231,7 @@
                 android:gravity="center_vertical"
                 android:text="Email "
                 android:textColor="@color/black"
+                android:fontFamily="@font/akaya_telivigala"
                 android:textSize="18dp" />
 
             <TextView
@@ -239,7 +240,7 @@
                 android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/editEmail"
                 android:gravity="center_vertical"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:text="annguyenfc@gmail.com"
                 android:textSize="18dp" />
 
@@ -249,7 +250,8 @@
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:backgroundTint="#8FD8C7"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <View
@@ -273,9 +275,9 @@
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
-                android:text="Sex"
+                android:text="Sex:"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -284,7 +286,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/editGioiTinh"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
                 android:text="Man"
                 android:textSize="18dp" />
@@ -295,7 +297,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:backgroundTint="#8FD8C7"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -315,10 +317,9 @@
                 android:layout_width="180dp"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="12dp"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
-                android:fontFamily="@font/tinos"
-
-                android:text="Số điện thoại"
+                android:text="Phone number:"
                 android:textColor="@color/black"
                 android:textSize="18dp" />
 
@@ -327,10 +328,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_toStartOf="@+id/editSDT"
-                android:fontFamily="@font/tinos"
+                android:fontFamily="@font/akaya_telivigala"
                 android:gravity="center_vertical"
                 android:text="0123456789"
-
                 android:textSize="18dp" />
 
             <ImageButton
@@ -339,7 +339,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:backgroundTint="#ffffff"
+                android:backgroundTint="#8FD8C7"
                 android:src="@drawable/ic_baseline_arrow_forward_ios_24"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </RelativeLayout>
@@ -351,34 +351,26 @@
             android:layout_marginHorizontal="8dp"/>
 
         <LinearLayout
+
             android:layout_width="match_parent"
-            android:background="@drawable/ic_wave2"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center_vertical">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnPass"
-                android:layout_width="250dp"
-                android:layout_height="50dp"
-                android:text="ĐẶT LẠI MẬT KHẨU"
-                android:backgroundTint="#259DA1"
-                android:textAlignment="center"
-                android:layout_gravity="center"
-                android:background="@drawable/radius"
-                android:textColor="@color/white"
-                />
+            android:background="@drawable/bg_color"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnDangXuat"
                 android:layout_width="250dp"
                 android:layout_height="50dp"
-                android:radius = "20dp"
-                android:layout_marginTop="10dp"
-                android:text="ĐĂNG XUẤT"
-                android:background="@drawable/radius"
-                android:backgroundTint="#B11FCC"
-                android:textAlignment="center"
                 android:layout_gravity="center"
-                android:textColor="@color/white"/>
+                android:layout_marginTop="10dp"
+                android:background="@drawable/radius"
+                android:backgroundTint="#69007C"
+                android:fontFamily="@font/akaya_telivigala"
+                android:radius="20dp"
+                android:text="ĐĂNG XUẤT"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
         </LinearLayout>
     </LinearLayout>
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home"
-    android:background="@drawable/ic_wave2"
+    android:background="@drawable/bg_color"
 
     android:orientation="vertical">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,8 +16,9 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Danh sách bài hát"
-            android:textSize="20dp"
+            android:text="LIST MUSIC"
+            android:fontFamily="@font/akaya_telivigala"
+            android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.1"
@@ -26,8 +27,8 @@
 
         <ImageButton
             android:id="@+id/imgBtSearch"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="#0000"
             android:src="@drawable/ic_baseline_account_box_24"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -38,8 +39,26 @@
             tools:ignore="SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listsong"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="610dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bottomNav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/meu_nav"
+            app:itemIconTint="@color/purple_500"
+            app:itemTextColor="@color/black">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

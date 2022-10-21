@@ -14,7 +14,7 @@
         android:theme="@style/Theme.TH_App_Tong_Hop"
         tools:targetApi="31">
         <activity
-            android:name=".Song"
+            android:name=".Detail"
             android:exported="false" />
         <activity
             android:name=".Profile"
